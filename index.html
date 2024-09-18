@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      font-family: 'arial';
+    }
+
+    #grandParent {
+      padding: 20px;
+      background-color: #81a1ff;
+      border: 2px solid #ba5a5a;
+      margin: 20px;
+    }
+
+    em {
+      color: #838282;
+    }
+
+    #parent {
+      padding: 20px;
+      background-color: #e0e0e0;
+      border: 2px solid #ccc;
+      margin: 20px;
+    }
+
+    #child {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <ul id="myList" class="flex gap-4">
+    <li class="bg-rose-400 text-white px-6 py-2 rounded-xl cursor-pointer">Item 1</li>
+    <li class="bg-rose-400 text-white px-6 py-2 rounded-xl cursor-pointer">Item 2</li>
+    <li class="bg-rose-400 text-white px-6 py-2 rounded-xl cursor-pointer">Item 3</li>
+  </ul>
+
+  <div id="grandParent">
+    <div id="parent">
+      <h2>Parent Div</h2>
+      <button id="child">Click Me!</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="lg:px-16">
+    <p>
+      <b>
+        stopPropagation()
+      </b><br>
+      <br>
+
+      <em>Purpose:</em> Prevents the event from bubbling up to parent elements.<br>
+      <em>Effect:</em> Once called, the event will not be dispatched to any parent elements. However, it will still
+      allow other
+      event listeners on the same element to execute.
+      <br> <br> <br>
+      <b>
+        stopImmediatePropagation()
+      </b><br>
+      <br>
+      <em>Purpose:</em> Prevents the event from bubbling up to parent elements and stops any other event listeners on
+      the same
+      element from being executed.<br>
+      <em>Effect:</em> Once called, it will halt any further event listeners on the current target element from running,
+      in
+      addition to preventing the event from bubbling up.
+    </p>
+  </div>
+  <script src="./app.js">
+   
+  </script>
+
+</body>
+
+</html>
